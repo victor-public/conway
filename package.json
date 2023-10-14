@@ -1,0 +1,33 @@
+{
+  "name": "conway-demo",
+  "version": "1.0.0",
+  "description": "Conway's game of life in vanilla Javascript",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "prebuild": "rm -rf dist/*",
+    "build": "parcel build",
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dada-public/conway.git"
+  },
+  "keywords": [
+    "conway",
+    "game",
+    "of",
+    "life",
+    "demo"
+  ],
+  "author": "Victor Santiago <vsantiago.public@protonmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dada-public/conway/issues"
+  },
+  "homepage": "https://github.com/dada-public/conway#readme",
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  }
+}
