@@ -1,2 +1,5 @@
 # Ignore NODE MODULES
 node_modules/
+
+# Ignore PARCEL files
+.parcel-cache

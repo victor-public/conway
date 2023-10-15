@@ -5,9 +5,8 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "prebuild": "rm -rf docs/*",
+    "prebuild": "rm -rf dist/*",
     "build": "parcel build",
-	  "postbuild": "mv dist/ docs/",
     "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
