@@ -22,6 +22,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+        with:
+          fetch_depth: 0
+      - run: npm ci
+      - run: npm run build
+
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -36,7 +46,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload entire repository
           path: 'docs/'
       - name: Deploy to GitHub Pages
         id: deployment
