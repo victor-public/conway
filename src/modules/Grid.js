@@ -6,7 +6,7 @@ export const Grid = {
       .map(() => Array(size).fill(false));
     this.table = document.createElement("table");
     this.isMouseDown = false;
-    this.interactive = false;
+    this.interactive = true;
 
     for (let row = 0; row < this.size; row++) {
       const tr = document.createElement("tr");
