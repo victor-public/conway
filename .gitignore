@@ -6,3 +6,4 @@ node_modules/
 
 # Ignore temporary builds
 docs/
+dist/
