@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rm -rf docs/*",
     "build": "parcel build src/index.html --public-url ./ --dist-dir docs",
-    "start": "parcel src/index.html",
+    "start": "parcel src/index.html --dist-dir docs",
     "test": "mocha --require esm 'tests/unit/**/*.test.js'",
     "test:watch": "nodemon --exec 'npm run test'"
   },
@@ -18,9 +18,7 @@
   },
   "keywords": [
     "conway",
-    "game",
-    "of",
-    "life",
+    "game of life",
     "demo"
   ],
   "author": "Victor Santiago <vsantiago.public@protonmail.com>",
