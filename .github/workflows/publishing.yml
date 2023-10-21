@@ -33,8 +33,7 @@ jobs:
       - run: npm run build
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: my_file.txt
+          path: 'docs/'
           retention-days: 5
 
   # Single deploy job since we're just deploying
