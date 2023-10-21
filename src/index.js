@@ -1,4 +1,4 @@
-import {Grid} from "./modules/Grid"
+import { Grid } from "./modules/Grid"
 
 Grid.init(16, document.querySelector("main"))
 

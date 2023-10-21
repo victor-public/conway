@@ -4,11 +4,13 @@
   "description": "Conway's game of life in vanilla Javascript",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
+  "type": "module",
   "scripts": {
     "prebuild": "rm -rf docs/*",
     "build": "parcel build src/index.html --public-url ./ --dist-dir docs",
     "start": "parcel src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require esm 'tests/unit/**/*.test.js'",
+    "test:watch": "nodemon --exec 'npm run test'"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,11 @@
   },
   "homepage": "https://github.com/dada-public/conway#readme",
   "devDependencies": {
+    "assert": "^2.1.0",
+    "esm": "^3.2.25",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
     "parcel": "^2.10.0"
   }
 }

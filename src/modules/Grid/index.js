@@ -60,3 +60,5 @@ export const Grid = {
     return this.cells[row][col];
   },
 };
+
+export default Grid;
