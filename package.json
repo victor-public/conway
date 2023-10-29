@@ -6,6 +6,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "type": "module",
   "scripts": {
+    "postinstall": "husky install",
     "prebuild": "rm -rf docs/*",
     "build": "parcel build src/index.html --public-url ./ --dist-dir docs",
     "start": "parcel src/index.html --dist-dir docs",
