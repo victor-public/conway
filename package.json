@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/dada-public/conway#readme",
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
     "assert": "^2.1.0",
     "eslint": "^8.52.0",
     "eslint-config-standard": "^17.1.0",
