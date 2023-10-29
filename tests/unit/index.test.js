@@ -1,6 +1,6 @@
-import { Grid } from "../../src/modules/Grid/index.js"
-import { JSDOM } from "jsdom"
-import assert from "assert";
+import { Grid } from '../../src/modules/Grid/index.js'
+import { JSDOM } from 'jsdom'
+import assert from 'assert'
 
 beforeEach(() => {
     const dom = new JSDOM(`
@@ -9,18 +9,17 @@ beforeEach(() => {
                 <main></main>
             </body>
         </html>`,
-        { url: "http://unit.tests" }
+    { url: 'http://unit.tests' }
     )
 
     global.window = dom.window;
     global.document = dom.window.document;
-    global.root = document.querySelector("main")
+    global.root = document.querySelector('main')
     global.size = 3
 });
 
-describe("Grid tests", () => {
-
-    it("Starts with all cells inactive", () => {
+describe('Grid tests', () => {
+    it('Starts with all cells inactive', () => {
         Grid.init(size, root)
         for (let row = 0; row < size; row++) {
             for (let col = 0; col < size; col++) {
@@ -29,7 +28,7 @@ describe("Grid tests", () => {
         }
     })
 
-    it("Sets cells alive", () => {
+    it('Sets cells alive', () => {
         Grid.init(size, root)
         assert.equal(Grid.getCellValue(0, 0), false)
         
@@ -37,10 +36,31 @@ describe("Grid tests", () => {
         assert.equal(Grid.getCellValue(0, 0), true)
     })
 
-    it("fills the HTML template with a table grid", () => {
+    it('fills the HTML template with a table grid', () => {
         Grid.init(size, root)
 
-        const cells = document.querySelectorAll("td")
+        const cells = document.querySelectorAll('td')
         assert.equal(cells.length, size * size)
+    })
+
+    it('resets all values to False', () => {
+        Grid.init(size, root)
+        // Random int between 0 and (size - 1).
+        const randomRow = Math.floor(Math.random() * size)
+        const randomCol = Math.floor(Math.random() * size)
+
+        Grid.setCellValue(randomRow, randomCol, true)
+
+        // At least one cell is True now.
+        assert.equal(Grid.getCellValue(randomRow, randomCol), true)
+
+        Grid.reset()
+
+        // Regardless of the assignment, now all cells are false.
+        for (let row = 0; row < size; row++) {
+            for (let col = 0; col < size; col++) {
+                assert.equal(Grid.getCellValue(randomRow, randomCol), false)
+            }
+        }
     })
 })
