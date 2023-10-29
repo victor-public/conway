@@ -14,9 +14,9 @@
     "test:watch": "nodemon --exec 'npm run test'",
     "lint": "eslint src"
   },
-  "husky":{
+  "husky": {
     "hooks": {
-      "pre-commit": "echo 'holis'"
+      "pre-commit": "npm test"
     }
   },
   "repository": {
