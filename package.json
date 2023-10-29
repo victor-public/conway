@@ -10,7 +10,13 @@
     "build": "parcel build src/index.html --public-url ./ --dist-dir docs",
     "start": "parcel src/index.html --dist-dir docs",
     "test": "mocha --require esm 'tests/unit/**/*.test.js'",
-    "test:watch": "nodemon --exec 'npm run test'"
+    "test:watch": "nodemon --exec 'npm run test'",
+    "lint": "eslint src"
+  },
+  "husky":{
+    "hooks": {
+      "pre-commit": "estlint src"
+    }
   },
   "repository": {
     "type": "git",
@@ -29,7 +35,13 @@
   "homepage": "https://github.com/dada-public/conway#readme",
   "devDependencies": {
     "assert": "^2.1.0",
+    "eslint": "^8.52.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1",
     "esm": "^3.2.25",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.1",
