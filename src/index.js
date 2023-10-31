@@ -2,8 +2,22 @@ import { Grid } from './modules/Grid'
 
 Grid.init(16, document.querySelector('main'))
 
-const button = document.getElementById('CLEAR')
+const clearBtn = document.getElementById('CLEAR')
 
-button.addEventListener('click', () => {
-    Grid.reset()
+clearBtn.addEventListener('click', () => {
+    Grid.clear()
 })
+
+const randomizeBtn = document.getElementById('START')
+
+randomizeBtn.addEventListener('click', () => {
+    Grid.randomize()
+});
+
+(() => {
+    Grid.randomize()
+
+    setInterval(() => {
+        Grid.step()
+    }, 200)
+})()
