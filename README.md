@@ -1,6 +1,6 @@
 # Conway's Game of Life Demo
 
-(Conway's Game)[https://conwaylife.com/] of Life is a cellular automaton devised by the mathematician John Conway. It is a zero-player game that follows simple rules to simulate the behavior of cells on a grid.
+[Conway's Game](https://conwaylife.com/) of Life is a cellular automaton devised by the mathematician John Conway. It is a zero-player game that follows simple rules to simulate the behavior of cells on a grid.
 
 This repository implents a web-based version of the game. You can play it by visiting: 
 
