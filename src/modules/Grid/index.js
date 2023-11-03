@@ -5,6 +5,8 @@ export const Grid = {
             .fill()
             .map(() => Array(size).fill(false));
         this.table = document.createElement('table');
+        this.table.classList.add('board')
+
         this.isMouseDown = false;
         this.interactive = true;
 
