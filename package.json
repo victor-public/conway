@@ -25,6 +25,7 @@
   ],
   "author": "Victor Santiago <vsantiago.public@protonmail.com>",
   "license": "MIT",
+  "private": true,
   "bugs": {
     "url": "https://github.com/dada-public/conway/issues"
   },
