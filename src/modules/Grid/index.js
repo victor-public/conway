@@ -7,9 +7,6 @@ export const Grid = {
         this.table = document.createElement('table');
         this.table.classList.add('board')
 
-        this.isMouseDown = false;
-        this.interactive = true;
-
         for (let row = 0; row < this.size; row++) {
             const tr = document.createElement('tr');
             for (let col = 0; col < this.size; col++) {
@@ -22,34 +19,6 @@ export const Grid = {
         }
 
         root.appendChild(this.table);
-
-        document.addEventListener('mousedown', () => {
-            this.isMouseDown = true;
-        });
-
-        document.addEventListener('mouseup', () => {
-            this.isMouseDown = false;
-        });
-
-        this.table.addEventListener('click', ({ target }) => {
-            if (this.interactive && target.matches('td')) {
-                const [col, row] = [
-                    target.getAttribute('data-col'),
-                    target.getAttribute('data-row')
-                ];
-                this.setCellValue(row, col, !this.cells[row][col]);
-            }
-        });
-
-        this.table.addEventListener('mousemove', ({ target }) => {
-            if (this.interactive && target.matches('td') && this.isMouseDown) {
-                const [col, row] = [
-                    target.getAttribute('data-col'),
-                    target.getAttribute('data-row')
-                ];
-                this.setCellValue(row, col, true);
-            }
-        });
     },
 
     getNeighbours (row, col) {
@@ -136,14 +105,6 @@ export const Grid = {
                 this.setCellValue(row, col, Math.round(Math.random()) === 1)
             }
         }
-    },
-
-    toggleInteractive () {
-        this.interactive = !this.interactive
-    },
-
-    togglePlaying () {
-        this.isPlaying = !this.isPlaying
     }
 };
 

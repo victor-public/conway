@@ -65,13 +65,6 @@ describe('Grid tests', () => {
         }
     })
 
-    it("Toggles interactive mode", () => {
-        Grid.init(size, root)
-        assert.equal(Grid.interactive, true)
-        Grid.toggleInteractive()
-        assert.equal(Grid.interactive, false)
-    })
-
     it("Assigns random values for cells", () => {
         const stub = sinon.stub(Math, 'random')
         Grid.init(size, root)
