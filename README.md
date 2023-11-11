@@ -15,6 +15,8 @@ To run the demo locally, follow these steps:
 2. Configure the repository by running: `npm install`
 3. Start the development server: `npm run start`
 4. Open your browser and visit: `http://localhost:1234`
+5. In case you want to add or modify the code: open a feature branch (feat/xxx). When 
+ready, the changes will be merged through a pull request.
 
 This repository also includes CLI commands to help adding new features 
 or fixing bugs:
@@ -35,5 +37,6 @@ This repository implements several workflows to enforce good practices, and depl
 
 This two hooks will be installed as part of this repository configuration step.
 
-3. Release workflow: based in conventional-commits this workflow publishes a new Github release on each push at main.
-4. Deployment workflow: updates this repository Pages on each push at main that contains relevant changes.
+3. Validate workflow: runs test to ensure all incoming code in a Pull request is valid.
+4. Release workflow: based in conventional-commits this workflow publishes a new Github release on each push at main.
+5. Deployment workflow: updates this repository Pages on each push at main that contains relevant changes.
