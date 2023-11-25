@@ -22,7 +22,7 @@ This repository also includes CLI commands to help adding new features
 or fixing bugs:
 
 * `npm install`: configures the repository for local development
-* `npm start` : suns a local server
+* `npm start` : runs a local server
 * `npm build` : builds a production ready distribution
 * `npm test`: runs tests
 * `npm test:watch`: runs test in watch mode
