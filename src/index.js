@@ -1,13 +1,12 @@
-import { Grid } from './modules/Grid'
+import { Board } from './modules/Board'
+import { conway } from './modules/Conway';
 
 const root = document.querySelector('main')
 
-Grid.init(100, root);
+Board.init(120, root, conway)
 
-(() => {
-    Grid.randomize()
+Board.randomize(() => Math.round(Math.random()) === 1)
 
-    setInterval(() => {
-        Grid.step()
-    }, 200)
-})()
+setInterval(() => {
+    Board.play()
+}, 100)

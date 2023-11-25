@@ -4,12 +4,13 @@
 
 @layer components {
     .board {
-        @apply border-4 border-gray-700 cursor-pointer;
+        @apply border-4 border-gray-700;
     }
 
     .board {
         td {
-            @apply bg-gray-900 rounded-sm w-1 h-1;
+            @apply bg-gray-900 rounded-sm;
+            @apply w-px h-px md:w-0.5 md:h-0.5 xl:w-1 xl:h-1;
         }
     
         td.alive {
