@@ -4,7 +4,7 @@
 
 This repository implents a web-based version of the game. You can play it by visiting: 
 
-[https://dada-public.github.io/conway/](https://dada-public.github.io/conway/)
+[https://dada-public.github.io/conway/](https://victor-public.github.io/conway/
 
 
 ## This repo usage
